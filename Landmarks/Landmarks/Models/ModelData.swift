@@ -11,6 +11,9 @@ import Combine
 final class ModelData: ObservableObject {
     // Landmark Array
     @Published var landmarks: [Landmark] = load("landmarkData.json")
+    
+    // hike 데이터를 처음 로드한 후에 수정하지 X. @Published 불필요
+    var hikes: [Hike] = load("hikeData.json")
 }
 
 // load(_:)
